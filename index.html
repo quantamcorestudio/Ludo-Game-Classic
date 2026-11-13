@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludo Game Classic — Roll, Strategize & Dominate the Global Board!</title>
+  <meta name="description" content="Ludo Game Classic by Quantum Core Studios. India's and World's #1 Ludo experience featuring International Esports Arena, Rapid Mode, 2-in-1 Snake & Ladders, and Dark Gothic Themed Arenas.">
+  <meta name="keywords" content="Ludo Game Classic, Quantum Core Studios, Pradipta Pal, Snake Ludo, Rapid Ludo, Mobile Board Game">
+  <meta property="og:title" content="Ludo Game Classic — Roll, Strategize & Dominate!">
+  <meta property="og:description" content="The timeless classic reimagined with high-octane modes, rich customization, and a simulated global competitive arena.">
+  <meta property="og:image" content="asset/banner.png">
+  <link rel="icon" type="image/jpeg" href="asset/game_icon.jpeg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       VIEWPORT & DUAL LAYOUT CONTROLLER (Desktop/Tablet vs Dedicated Mobile)
+       ========================================================================== -->
+  <div class="layout-control-banner">
+    <div class="layout-info-pill">
+      <span class="layout-status-dot"></span>
+      <span style="font-weight: 700; color: #fff;">LUDO CLASSIC PORTAL</span>
+      <span style="color: var(--text-dim);">|</span>
+      <span id="screenSizeIndicator">Detecting screen size...</span>
+    </div>
+    <div class="layout-switch-buttons">
+      <button id="btnLayoutAuto" class="layout-btn active" title="Automatically adapt layout based on device screen width">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Auto Screen
+      </button>
+      <button id="btnLayoutDesktop" class="layout-btn" title="Force Desktop & Tablet widescreen layout">
+        <i class="fa-solid fa-desktop"></i> Desktop / Tablet
+      </button>
+      <button id="btnLayoutMobile" class="layout-btn" title="Simulate dedicated Mobile Screen layout in phone view">
+        <i class="fa-solid fa-mobile-screen"></i> Mobile UI
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       LAYOUT 1: COMPUTER & TABLET SCREEN LAYOUT
+       ========================================================================== -->
+  <div id="desktop-tablet-view">
+
+    <!-- Desktop Sticky Navigation -->
+    <header class="desktop-navbar">
+      <div class="desktop-container desktop-nav-content">
+        <a href="#hero" class="brand-identity">
+          <img src="asset/game_icon.jpeg" alt="Ludo Game Classic Icon" class="brand-icon">
+          <div class="brand-text">
+            <h1>LUDO <span class="gold-gradient-text">CLASSIC</span></h1>
+            <span class="brand-badge"><i class="fa-solid fa-bolt"></i> Quantum Core Studios • Launch Nov 2026</span>
+          </div>
+        </a>
+
+        <nav class="desktop-nav-links">
+          <a href="#overview">Overview</a>
+          <a href="#trailer">Trailer</a>
+          <a href="#modes">Game Modes</a>
+          <a href="#arenas">Themed Arenas</a>
+          <a href="#community">World Chat</a>
+          <a href="#lucky-wheel">Lucky Wheel</a>
+          <a href="#team">Studio & Team</a>
+          <a href="#faq">FAQ</a>
+          <a href="#privacy">Privacy Policy</a>
+        </nav>
+
+        <div class="desktop-nav-actions">
+          <button class="sound-toggle-btn" title="Toggle Synthesized Game Sound Effects">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
+          <a href="#download" class="btn btn-gold trigger-download-modal">
+            <i class="fa-brands fa-google-play"></i> Get Game Free
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Desktop Hero Section -->
+    <section id="hero" class="desktop-hero">
+      <div class="desktop-container hero-grid">
+        <div class="hero-content">
+          <div class="esports-pill">
+            <span class="pulse-dot"></span>
+            <span>🏆 INDIA'S #1 & WORLD'S #1 LUDO REVOLUTION</span>
+          </div>
+          <h1 class="hero-title">
+            Roll, Strategize & <br>
+            <span class="gold-gradient-text">Dominate The Global Board!</span>
+          </h1>
+          <p class="hero-subtitle">
+            The timeless classic reimagined with high-octane modes, rich customization, and a simulated global competitive arena. Play solo, challenge friends offline, or enter international arenas with players worldwide. No wait times, pure excitement.
+          </p>
+
+          <div class="hero-feature-chips">
+            <span class="hero-chip"><i class="fa-solid fa-globe"></i> International Match</span>
+            <span class="hero-chip"><i class="fa-solid fa-stopwatch-20"></i> Rapid Ludo (3-5 min)</span>
+            <span class="hero-chip"><i class="fa-solid fa-staff-snake"></i> 2-in-1 Snake & Ladders</span>
+            <span class="hero-chip"><i class="fa-solid fa-shield-halved"></i> Instagram Blue Tick VIP</span>
+            <span class="hero-chip"><i class="fa-solid fa-wifi"></i> 100% Offline Pass & Play</span>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-gold trigger-download-modal">
+              <i class="fa-brands fa-google-play"></i> Download APK / Google Play
+            </button>
+            <a href="#trailer" class="btn btn-glass">
+              <i class="fa-solid fa-play"></i> Watch Gameplay Trailer
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <h3>500K+</h3>
+              <p>Pre-Registrations</p>
+            </div>
+            <div class="stat-item">
+              <h3>3-5s</h3>
+              <p>Instant Matchmaking</p>
+            </div>
+            <div class="stat-item">
+              <h3>4.9 ★</h3>
+              <p>Esports Rating</p>
+            </div>
+            <div class="stat-item">
+              <h3>5</h3>
+              <p>Gothic Themed Arenas</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase with Interactive 3D Dice and Match Card -->
+        <div class="hero-visual-card">
+          <!-- Floating Interactive Dice Widget -->
+          <div id="heroDiceCard" class="floating-dice-card" title="Click to Roll Dice!">
+            <div class="dice-cube-visual" id="heroDiceNumber">6</div>
+            <div class="dice-info">
+              <h4>Interactive 3D Dice</h4>
+              <p>Click me to roll!</p>
+            </div>
+          </div>
+
+          <!-- Main Framed Banner Image -->
+          <div class="hero-banner-wrapper">
+            <img src="asset/banner.png" alt="Ludo Game Classic Landscape Banner" class="hero-banner-img">
+            <div class="hero-banner-overlay">
+              <div class="banner-overlay-content">
+                <div class="live-match-badge">
+                  <span class="layout-status-dot"></span>
+                  <span>GLOBAL SERVER LIVE • NOV 2026</span>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--gold-light); font-weight: 700;">
+                  Quantum Core Studios
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Live Match Card -->
+          <div class="floating-match-card">
+            <div class="match-flags">🇮🇳 🇺🇸 🇯🇵 🇧🇷</div>
+            <div class="match-info">
+              <h5>International Arena</h5>
+              <p>4 Players • Ranked Match</p>
+            </div>
+            <div class="match-ping-indicator">
+              <i class="fa-solid fa-signal"></i> 24ms
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Esports Video Trailer Theater -->
+    <section id="trailer" class="trailer-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-film"></i> Official Gameplay Footage</span>
+          <h2 class="section-title">Witness <span class="gold-gradient-text">High-Octane Battles</span> in Action</h2>
+          <p class="section-subtitle">Stunning 3D dice bounce physics, atmospheric arena backgrounds, dynamic emoji reactions, and fluid animations captured directly from the game engine.</p>
+        </div>
+
+        <div class="trailer-frame">
+          <video id="gameplayVideo" loop playsinline poster="asset/game_homescreen_bg.jpeg">
+            <source src="asset/landscape_video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <div class="trailer-custom-bar">
+            <div class="trailer-meta">
+              <i class="fa-solid fa-gamepad" style="color:var(--gold-light);"></i>
+              <span style="font-weight: 700; font-size: 0.95rem;">Ludo Game Classic — Official Launch Gameplay Showcase</span>
+              <span class="esports-pill" style="margin-bottom: 0; padding: 2px 10px; font-size: 0.7rem;">4K 60FPS READY</span>
+            </div>
+            <div class="trailer-controls">
+              <button id="btnVideoPlayPause" class="video-ctrl-btn">
+                <i class="fa-solid fa-play"></i> Play Trailer
+              </button>
+              <button id="btnVideoMute" class="video-ctrl-btn">
+                <i class="fa-solid fa-volume-high"></i> Mute
+              </button>
+              <button id="btnVideoFullscreen" class="video-ctrl-btn">
+                <i class="fa-solid fa-expand"></i> Fullscreen
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Game Modes Hub -->
+    <section id="modes" class="modes-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-cubes"></i> Diverse Match Arenas</span>
+          <h2 class="section-title">Engineered for <span class="gold-gradient-text">Every Playstyle</span></h2>
+          <p class="section-subtitle">From lightning-fast 3-minute rapid skirmishes to nostalgic couch multiplayer and 2-in-1 Snake & Ladders board racing.</p>
+        </div>
+
+        <div class="modes-grid">
+          <!-- 1. International Match -->
+          <div class="mode-card">
+            <div class="mode-card-header">
+              <img src="asset/international_match_button.png" alt="International Match Mode">
+              <span class="mode-tag"><i class="fa-solid fa-earth-americas"></i> Esports Global</span>
+            </div>
+            <div class="mode-card-body">
+              <h3 class="mode-title">The International Arena</h3>
+              <div class="mode-players"><i class="fa-solid fa-users"></i> 2, 3, or 4 Players Online</div>
+              <p class="mode-desc">
+                Instant 3 to 5-second matchmaking connects players to contenders across the globe. Features authentic national flags (USA 🇺🇸, Japan 🇯🇵, India 🇮🇳, Brazil 🇧🇷, Germany 🇩🇪, UK 🇬🇧), real-time millisecond ping meter, dynamic emoji reactions, and verified blue tick masters.
+              </p>
+              <div class="mode-features-list">
+                <div class="mode-feature-item"><i class="fa-solid fa-bolt"></i> Ultra-Low Latency Ping Meter (ms)</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-flag"></i> National Flags & Country Badges</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-face-laugh-squint"></i> In-Match Dynamic Emoji Taunts</div>
+              </div>
+              <div class="mode-card-footer">
+                <span style="font-weight:700; color:var(--gold-light); font-size:0.88rem;">Ranked Competitive</span>
+                <button class="btn btn-sm btn-gold trigger-download-modal">Play Arena</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Rapid Ludo -->
+          <div class="mode-card">
+            <div class="mode-card-header">
+              <img src="asset/rapid_ludo_button.png" alt="Rapid Ludo Mode">
+              <span class="mode-tag"><i class="fa-solid fa-bolt-lightning"></i> 3-5 Min Sprint</span>
+            </div>
+            <div class="mode-card-body">
+              <h3 class="mode-title">Rapid Ludo Mode</h3>
+              <div class="mode-players"><i class="fa-solid fa-users"></i> 2 or 4 Players</div>
+              <p class="mode-desc">
+                Engineered for players who want fast, intense action. Streamlined rules and shortened tracks deliver adrenaline-packed 3 to 5-minute matches—perfect for quick coffee breaks and fast-paced leaderboard climbs.
+              </p>
+              <div class="mode-features-list">
+                <div class="mode-feature-item"><i class="fa-solid fa-stopwatch"></i> Fast-Paced Turbo Track Rules</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-fire"></i> Quick Elimination & Sudden Death</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-trophy"></i> Rapid XP Multipliers</div>
+              </div>
+              <div class="mode-card-footer">
+                <span style="font-weight:700; color:var(--gold-light); font-size:0.88rem;">Turbo Action</span>
+                <button class="btn btn-sm btn-gold trigger-download-modal">Play Rapid</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Snake Ludo -->
+          <div class="mode-card">
+            <div class="mode-card-header">
+              <img src="asset/snake_ludo_button.png" alt="Snake Ludo Mode">
+              <span class="mode-tag"><i class="fa-solid fa-staff-snake"></i> 2-in-1 Game</span>
+            </div>
+            <div class="mode-card-body">
+              <h3 class="mode-title">Snake & Ladders Ludo</h3>
+              <div class="mode-players"><i class="fa-solid fa-users"></i> 2, 3, or 4 Players</div>
+              <p class="mode-desc">
+                An integrated standalone board game inside the app! Dynamic board mechanics let you roll the dice to climb towering ladders or slide down treacherous snakes. Rolling a 6 earns celebration banners and extra bonus turns.
+              </p>
+              <div class="mode-features-list">
+                <div class="mode-feature-item"><i class="fa-solid fa-layer-group"></i> Wooden Classic, Ice Age & Disco Arenas</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-gift"></i> Roll 6 Bonus Turn Mechanics</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-coins"></i> Custom Entry Stakes & Jackpots</div>
+              </div>
+              <div class="mode-card-footer">
+                <span style="font-weight:700; color:var(--gold-light); font-size:0.88rem;">Double the Fun</span>
+                <button class="btn btn-sm btn-gold trigger-download-modal">Play Snake</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Pass & Play (Vs Friends) -->
+          <div class="mode-card">
+            <div class="mode-card-header" style="display:flex; align-items:center; justify-content:center; background:#111827;">
+              <img src="asset/play_button_bg.png" alt="Pass and Play Vs Friends" style="max-height:110px;">
+              <span class="mode-tag"><i class="fa-solid fa-couch"></i> 100% Offline</span>
+            </div>
+            <div class="mode-card-body">
+              <h3 class="mode-title">Pass & Play (Vs Friends)</h3>
+              <div class="mode-players"><i class="fa-solid fa-users"></i> 2 to 4 Players (Same Device)</div>
+              <p class="mode-desc">
+                Traditional couch multiplayer on a single device—no internet or second phone required. Gather family, roommates, and friends around one screen and pass the phone around just like a classic physical wooden board.
+              </p>
+              <div class="mode-features-list">
+                <div class="mode-feature-item"><i class="fa-solid fa-ban"></i> Zero Data or Wi-Fi Needed</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-rotate"></i> Auto-Orient Screen Rotation</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-heart"></i> Pure Nostalgic Board Feel</div>
+              </div>
+              <div class="mode-card-footer">
+                <span style="font-weight:700; color:var(--gold-light); font-size:0.88rem;">Couch Multiplayer</span>
+                <button class="btn btn-sm btn-gold trigger-download-modal">Start Local</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Vs Smart AI -->
+          <div class="mode-card">
+            <div class="mode-card-header" style="display:flex; align-items:center; justify-content:center; background:#0f172a;">
+              <img src="asset/setting_button_logo.png" alt="Vs Smart AI" style="max-height:110px;">
+              <span class="mode-tag"><i class="fa-solid fa-brain"></i> Tactical Bots</span>
+            </div>
+            <div class="mode-card-body">
+              <h3 class="mode-title">Vs Smart Tactical AI</h3>
+              <div class="mode-players"><i class="fa-solid fa-user"></i> 1 to 4 Players Offline</div>
+              <p class="mode-desc">
+                Play against intelligent, tactical computer opponents anytime, anywhere. Built with heuristic probability algorithms that plan pawn advances, safe square camps, and aggressive knockouts without cheating dice rolls.
+              </p>
+              <div class="mode-features-list">
+                <div class="mode-feature-item"><i class="fa-solid fa-sliders"></i> Adjustable AI Difficulty Levels</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-plane"></i> Play on Flights & Commutes</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-graduation-cap"></i> Practice Your Board Strategies</div>
+              </div>
+              <div class="mode-card-footer">
+                <span style="font-weight:700; color:var(--gold-light); font-size:0.88rem;">Offline Practice</span>
+                <button class="btn btn-sm btn-gold trigger-download-modal">Train AI</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. 1v1 Inbox Challenges -->
+          <div class="mode-card">
+            <div class="mode-card-header">
+              <img src="asset/reward_button.png" alt="1v1 Inbox Challenges">
+              <span class="mode-tag"><i class="fa-solid fa-envelope"></i> Direct Rivalry</span>
+            </div>
+            <div class="mode-card-body">
+              <h3 class="mode-title">1v1 Inbox & DM Challenges</h3>
+              <div class="mode-players"><i class="fa-solid fa-handshake"></i> 1 vs 1 Direct Duels</div>
+              <p class="mode-desc">
+                Accept direct challenge invites from other players in your inbox and settle board rivalries. Send custom challenge stakes, chat directly with rivals, and build personal win-loss records against your arch-nemesis.
+              </p>
+              <div class="mode-features-list">
+                <div class="mode-feature-item"><i class="fa-solid fa-message"></i> Integrated Direct Messaging (DM)</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-shield-virus"></i> Rematch Invitation History</div>
+                <div class="mode-feature-item"><i class="fa-solid fa-gem"></i> Diamond & Gold Wagers</div>
+              </div>
+              <div class="mode-card-footer">
+                <span style="font-weight:700; color:var(--gold-light); font-size:0.88rem;">Head to Head</span>
+                <button class="btn btn-sm btn-gold trigger-download-modal">Challenge</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Themed Arenas Explorer & 3D Dice Lab -->
+    <section id="arenas" class="arenas-interactive-section">
+      <div class="desktop-container arenas-grid">
+        <!-- Left: Themed Arenas Showcase -->
+        <div class="arena-showcase-panel">
+          <span class="section-tag"><i class="fa-solid fa-palette"></i> Atmospheric Themed Battlefields</span>
+          <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Ditch The Plain White Board</h3>
+          <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:20px;">
+            Immerse yourself in rich gothic, fantasy, and post-apocalyptic environments with bespoke soundscapes and ambient lighting.
+          </p>
+
+          <div class="arena-tabs">
+            <button class="arena-tab-btn active" data-arena="wooden">Classic Wooden Table</button>
+            <button class="arena-tab-btn" data-arena="church">Ruined Church</button>
+            <button class="arena-tab-btn" data-arena="skull">Skull Hunter</button>
+            <button class="arena-tab-btn" data-arena="lastbattle">The Last Battle</button>
+            <button class="arena-tab-btn" data-arena="deadland">Deadland Arena</button>
+          </div>
+
+          <div id="arenaDisplayStage" class="arena-display-stage" style="background: linear-gradient(135deg, rgba(69, 26, 3, 0.85) 0%, rgba(120, 53, 15, 0.85) 100%), url('asset/game_homescreen_bg.jpeg'); background-size: cover; background-position: center;">
+            <div class="arena-display-overlay"></div>
+            <div class="arena-stage-info">
+              <span class="esports-pill" style="margin-bottom:8px; font-size:0.75rem;">CURRENTLY INSPECTING ARENA</span>
+              <h4 id="arenaStageTitle" class="arena-stage-title">Classic Wooden Table Arena</h4>
+              <p id="arenaStageDesc" class="arena-stage-desc">
+                Warm, nostalgic, handcrafted polished mahogany tabletop aesthetics reminiscent of heritage family game nights.
+              </p>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+            <div style="display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--gold-light);">
+              <i class="fa-solid fa-medal"></i> Collectable Arena Titles: <strong>Supreme, Eternal, Legend, Grandmaster, Conqueror</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive 3D Dice Roller Playground -->
+        <div class="dice-lab-panel">
+          <span class="section-tag"><i class="fa-solid fa-dice"></i> Physics Lab</span>
+          <h3 class="dice-lab-title">Interactive 3D Dice Roller</h3>
+          <p class="dice-lab-subtitle">Test our 3D dice physics engine with realistic bounce and audio effects!</p>
+
+          <div class="dice-3d-stage">
+            <div id="dice3dBox" class="dice-3d-box" title="Click to Roll!">
+              <!-- Face 1 -->
+              <div class="dice-face face-1">
+                <div class="dice-dot red"></div>
+              </div>
+              <!-- Face 2 -->
+              <div class="dice-face face-2">
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+              </div>
+              <!-- Face 3 -->
+              <div class="dice-face face-3">
+                <div class="dice-dot"></div>
+                <div class="dice-dot red"></div>
+                <div class="dice-dot"></div>
+              </div>
+              <!-- Face 4 -->
+              <div class="dice-face face-4">
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+              </div>
+              <!-- Face 5 -->
+              <div class="dice-face face-5">
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+                <div class="dice-dot red"></div>
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+              </div>
+              <!-- Face 6 -->
+              <div class="dice-face face-6">
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+                <div class="dice-dot"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="diceResultBanner" class="dice-result-banner">Click the dice or button below to roll!</div>
+
+          <button id="btnRollDice" class="btn btn-gold" style="width: 100%;">
+            <i class="fa-solid fa-dice-d6"></i> Roll 3D Dice Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Realistic World Chat & Instagram Profile Simulator -->
+    <section id="community" class="community-chat-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-comments"></i> 5,000+ Dynamic Conversations</span>
+          <h2 class="section-title">A Living, Breathing <span class="gold-gradient-text">World Chat Feed</span></h2>
+          <p class="section-subtitle">
+            Powered by 2,000+ unique player personas across the globe. Click on any chatter to inspect their trophies, win rate, country, and verified blue tick status!
+          </p>
+        </div>
+
+        <div class="chat-sim-grid">
+          <!-- Left: World Chat Feed -->
+          <div class="chat-stream-panel">
+            <div class="chat-stream-header">
+              <div class="chat-online-count">
+                <span class="layout-status-dot"></span>
+                <span>GLOBAL CHANNEL #1 • 8,420 PLAYERS ONLINE</span>
+              </div>
+              <span style="font-size:0.75rem; color:var(--text-dim);">TAP CHATTER TO INSPECT</span>
+            </div>
+
+            <div class="chat-feed-box">
+              <!-- Dynamically populated by JS -->
+            </div>
+
+            <!-- Quick-Chat Chips -->
+            <div class="chat-quick-chips">
+              <button class="quick-chip">Good game!</button>
+              <button class="quick-chip">Let's play!</button>
+              <button class="quick-chip">Roll a 6!</button>
+              <button class="quick-chip">Rematch in Rapid?</button>
+              <button class="quick-chip">Check my profile! 🔥</button>
+            </div>
+
+            <!-- Send Message Bar -->
+            <div class="chat-input-row">
+              <input type="text" class="chat-input-field" placeholder="Type a message to the world feed...">
+              <button class="btn btn-gold btn-send-chat">
+                <i class="fa-solid fa-paper-plane"></i> Send
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Instagram-Style Player Profile Card -->
+          <div class="profile-inspector-panel">
+            <div class="profile-card-cover" style="background-image: url('asset/game_homescreen_bg.jpeg');"></div>
+            <div class="profile-card-body">
+              <div class="profile-avatar-wrapper">
+                <div id="profileInspectorAvatar" class="profile-avatar-img">PP</div>
+                <div class="profile-avatar-glow-ring"></div>
+              </div>
+
+              <div class="profile-name-row">
+                <h4 id="profileInspectorName" class="profile-display-name">🇮🇳 ProdiptoPal</h4>
+                <span id="profileInspectorBlueTick" class="blue-tick-badge" title="Verified Blue Tick">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+              </div>
+
+              <span id="profileInspectorTitle" class="profile-title-tag">Supreme Architect</span>
+              <p id="profileInspectorBio" class="profile-bio">
+                Founder, CEO & Lead Developer of Ludo Game Classic. Catch me on the International Arena!
+              </p>
+
+              <div class="profile-stats-grid">
+                <div class="profile-stat-box">
+                  <h5 id="profileInspectorMatches">1,420</h5>
+                  <p>Matches</p>
+                </div>
+                <div class="profile-stat-box">
+                  <h5 id="profileInspectorWinRate">88.4%</h5>
+                  <p>Win Rate</p>
+                </div>
+                <div class="profile-stat-box">
+                  <h5>Rank #1</h5>
+                  <p>Global Tier</p>
+                </div>
+              </div>
+
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; margin-bottom:8px;">
+                Earned Achievement Trophies:
+              </div>
+              <div class="profile-trophies-row">
+                <div class="trophy-badge" title="Master of Sixes"><i class="fa-solid fa-crown"></i></div>
+                <div class="trophy-badge" title="Snake Slayer"><i class="fa-solid fa-staff-snake"></i></div>
+                <div class="trophy-badge" title="Rapid Speed Demon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="trophy-badge" title="Blue Tick Elite"><i class="fa-solid fa-certificate"></i></div>
+              </div>
+
+              <button class="btn btn-gold trigger-download-modal" style="width: 100%;">
+                <i class="fa-solid fa-handshake"></i> Send 1v1 Challenge Invite
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lucky Spin Wheel & Daily Rewards Showcase -->
+    <section id="lucky-wheel" class="lucky-wheel-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-gift"></i> Casino Lucky Wheel & Quests</span>
+          <h2 class="section-title">Free Daily Spins & <span class="gold-gradient-text">Massive Jackpots</span></h2>
+          <p class="section-subtitle">
+            1 guaranteed free spin every 24 hours. Spin for +1,000 Gold, +500 Diamonds, Grandmaster titles, or the elusive 24-Hour Profile Enhancer glow boost!
+          </p>
+        </div>
+
+        <div class="wheel-showcase-grid">
+          <!-- Left: Interactive Canvas Wheel -->
+          <div class="wheel-container-card">
+            <div class="wheel-pointer"></div>
+            <div class="wheel-wrapper">
+              <canvas id="luckyWheelCanvas" width="320" height="320"></canvas>
+              <div class="wheel-center-cap">SPIN</div>
+            </div>
+
+            <div class="wheel-action-btns">
+              <button id="btnSpinFree" class="btn btn-gold">
+                <i class="fa-solid fa-gift"></i> 1 Daily Free Spin
+              </button>
+              <button id="btnSpinDiamond" class="btn btn-glass">
+                <i class="fa-solid fa-gem" style="color:#60a5fa;"></i> Spin (149 Diamonds)
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Daily Quests & Progress Panel -->
+          <div class="daily-rewards-card">
+            <h3 style="font-size:1.5rem; margin-bottom:16px; display:flex; align-items:center; gap:10px;">
+              <i class="fa-solid fa-calendar-check" style="color:var(--gold-light);"></i> Daily Quests & Milestones
+            </h3>
+
+            <div class="quest-item">
+              <div class="quest-icon"><i class="fa-solid fa-door-open"></i></div>
+              <div class="quest-details">
+                <div class="quest-title">Daily Login Reward</div>
+                <div class="quest-reward">+500 Gold & 20 Diamonds for opening app</div>
+              </div>
+              <button class="btn btn-sm btn-gold trigger-download-modal">Claim</button>
+            </div>
+
+            <div class="quest-item">
+              <div class="quest-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <div class="quest-details">
+                <div class="quest-title">Online Profile Sync Reward</div>
+                <div class="quest-reward">Bonus diamonds for cloud syncing your profile</div>
+              </div>
+              <button class="btn btn-sm btn-glass trigger-download-modal">Sync</button>
+            </div>
+
+            <div class="quest-item">
+              <div class="quest-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+              <div class="quest-details">
+                <div class="quest-title">3-Game Win Streak Quest</div>
+                <div class="quest-reward">Unlock exclusive "Conqueror" Title badge</div>
+              </div>
+              <button class="btn btn-sm btn-glass trigger-download-modal">Active</button>
+            </div>
+
+            <div class="quest-item">
+              <div class="quest-icon"><i class="fa-solid fa-cake-candles"></i></div>
+              <div class="quest-details">
+                <div class="quest-title">Account Age Milestones</div>
+                <div class="quest-reward">Earn exponential rewards as your account matures</div>
+              </div>
+              <span style="font-size:0.75rem; color:var(--text-dim); font-weight:700;">TIER 1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Grid -->
+    <section id="overview" class="why-us-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-star"></i> Core Advantages</span>
+          <h2 class="section-title">Why Players Choose <span class="gold-gradient-text">Ludo Classic</span></h2>
+          <p class="section-subtitle">Crafted with obsessive precision for competitive board enthusiasts and casual families alike.</p>
+        </div>
+
+        <div class="features-highlight-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3 class="feature-title">Zero Waiting Times</h3>
+            <p class="feature-desc">Lightning matchmaking engine connects you with opponents in under 3-5 seconds. Jump right into the action without tedious matchmaking delays.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 class="feature-title">100% Offline & Online</h3>
+            <p class="feature-desc">Complete Pass & Play multiplayer on a single phone, plus intelligent tactical AI when you travel with zero internet or Wi-Fi connection.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-headphones"></i></div>
+            <h3 class="feature-title">Rich Audio-Visuals</h3>
+            <p class="feature-desc">Subtle haptic feedback, 3D dice bounce animations, and premium atmospheric sound design customized for each gothic battleground.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-staff-snake"></i></div>
+            <h3 class="feature-title">Two Games in One App</h3>
+            <p class="feature-desc">Enjoy full-featured Classic Ludo alongside an entire standalone Snake & Ladders board game featuring ladders, snakes, and bonus turn mechanics.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-certificate"></i></div>
+            <h3 class="feature-title">Deep Player Progression</h3>
+            <p class="feature-desc">Level up your persona, unlock prestigious Instagram-style Blue Tick badges, equip titles (Grandmaster, Supreme), and collect rare arena skins.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-shield-cat"></i></div>
+            <h3 class="feature-title">Fair Play & Anti-Cheat</h3>
+            <p class="feature-desc">Cryptographically verified dice roll randomness ensures no biased rolls, transparent competitive integrity, and pure strategic triumph.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mode Matrix Comparison Table -->
+    <section class="table-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-table"></i> Complete Roster</span>
+          <h2 class="section-title">Mode Specification <span class="gold-gradient-text">Matrix</span></h2>
+          <p class="section-subtitle">Quick reference breakdown of every game mode available in Ludo Game Classic.</p>
+        </div>
+
+        <div class="matrix-table-card">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Mode Name</th>
+                <th>Player Count</th>
+                <th>Description</th>
+                <th>Connectivity</th>
+                <th>Highlight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>International Arena</td>
+                <td>2, 3, or 4 Players</td>
+                <td>Competitive global showdowns with realistic player personas, titles, and country flags.</td>
+                <td><span style="color:var(--ping-green);"><i class="fa-solid fa-globe"></i> Online</span></td>
+                <td>Real-time ping meter (ms)</td>
+              </tr>
+              <tr>
+                <td>Rapid Ludo</td>
+                <td>2 or 4 Players</td>
+                <td>Ultra-fast matches with fast-paced rules and rapid finishes.</td>
+                <td><span style="color:var(--ping-green);"><i class="fa-solid fa-globe"></i> Online / Offline</span></td>
+                <td>3 to 5-minute action sprints</td>
+              </tr>
+              <tr>
+                <td>Snake Ludo</td>
+                <td>2, 3, or 4 Players</td>
+                <td>The classic Snake & Ladder race with custom themes and climb/bite physics.</td>
+                <td><span style="color:var(--ping-green);"><i class="fa-solid fa-globe"></i> Online / Offline</span></td>
+                <td>Wooden, Ice Age & Disco boards</td>
+              </tr>
+              <tr>
+                <td>Pass & Play (Vs Friends)</td>
+                <td>2 to 4 Players</td>
+                <td>Traditional couch multiplayer on a single device—no internet or second phone required.</td>
+                <td><span style="color:var(--gold-light);"><i class="fa-solid fa-ban"></i> 100% Offline</span></td>
+                <td>Single device family play</td>
+              </tr>
+              <tr>
+                <td>Vs Smart AI</td>
+                <td>1 to 4 Players</td>
+                <td>Play against intelligent, tactical offline computer opponents anytime, anywhere.</td>
+                <td><span style="color:var(--gold-light);"><i class="fa-solid fa-ban"></i> 100% Offline</span></td>
+                <td>Probability-based tactic bots</td>
+              </tr>
+              <tr>
+                <td>1v1 Inbox Challenges</td>
+                <td>1 vs 1</td>
+                <td>Accept direct challenge invites from other players and settle rivalries on the board.</td>
+                <td><span style="color:var(--ping-green);"><i class="fa-solid fa-globe"></i> Online</span></td>
+                <td>Custom wagers & rivalry chat</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio, Founders & Contributing Companies Spotlight -->
+    <section id="team" class="team-studios-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-building"></i> Leadership & Development</span>
+          <h2 class="section-title">The Masterminds <span class="gold-gradient-text">Behind the Board</span></h2>
+          <p class="section-subtitle">
+            Ludo Game Classic is developed by Quantum Core Studios, an ambitious indie gaming company founded by Pradipta Pal, Tanay Halder & Subhrojoyti Roy.
+          </p>
+        </div>
+
+        <!-- Lead Developer & Architect Spotlight Card -->
+        <div class="lead-developer-card">
+          <div class="dev-photo-wrapper">
+            <img src="asset/pradipta_pal_main_dev.jpeg" alt="Pradipta Pal - Founder, CEO & Lead Architect">
+          </div>
+          <div class="dev-content-pane">
+            <div class="dev-role-badge">
+              <i class="fa-solid fa-crown"></i> Founder • CEO • Lead Architect • Main Developer
+            </div>
+            <h3 class="dev-name">Pradipta Pal</h3>
+            <div class="dev-titles">Visionary Founder & Chief Game Architect</div>
+            <p class="dev-bio">
+              Pradipta Pal is the core architect and creator who designed, coded, and engineered the complete gameplay loops, low-latency esports simulation, 3D dice physics, and atmospheric battlegrounds that define Ludo Game Classic. Under his guidance, the studio is setting a new benchmark for competitive mobile board games.
+            </p>
+            <div>
+              <a href="https://www.instagram.com/prodipto_pal?exln=am55ZGtxOWl4ZHB4" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+                <i class="fa-brands fa-instagram"></i> Follow @prodipto_pal on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Co-Founders & Contributing Companies Grid -->
+        <div class="partners-grid">
+          <!-- 1. Quantum Core Studios -->
+          <div class="partner-card" style="padding-top:0; overflow:hidden;">
+            <div style="height:90px; width:calc(100% + 48px); margin:-0 -24px 16px -24px; overflow:hidden;">
+              <img src="asset/quantamcore_banner.jpeg" alt="Quantum Core Banner" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <img src="asset/quantamcore_round_logo.png" alt="Quantum Core Studios Logo" class="partner-avatar-img" style="margin-top:-38px;">
+            <h4 class="partner-name">Quantum Core Studios</h4>
+            <div class="partner-role">Main Developing & Publishing Studio</div>
+            <p class="partner-desc">
+              The flagship indie game development studio publishing Ludo Game Classic on the Google Play Store. Founded by Pradipta Pal, Tanay Halder & Subhrojoyti Roy.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <a href="https://quantamcorestudio.github.io/quantam-core-website/" target="_blank" rel="noopener noreferrer" class="partner-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Official Studio Website
+              </a>
+              <a href="https://www.instagram.com/quantam_core?rpxt=MXVwaXJ1MTFsamV5aA==" target="_blank" rel="noopener noreferrer" class="partner-link">
+                <i class="fa-brands fa-instagram"></i> @quantam_core
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Co-Founders (Founders Team) -->
+          <div class="partner-card">
+            <img src="asset/founders.jpeg" alt="Founders Team" class="partner-avatar-img" style="width:84px; height:84px;">
+            <h4 class="partner-name">Founding Trio</h4>
+            <div class="partner-role">Pradipta, Tanay & Subhrojoyti</div>
+            <p class="partner-desc">
+              The visionary co-founders behind Quantum Core Studios: Pradipta Pal, Tanay Halder, and Subhrojoyti Roy, united to craft world-class Indian indie gaming experiences.
+            </p>
+            <a href="https://quantamcorestudio.github.io/quantam-core-website/" target="_blank" rel="noopener noreferrer" class="partner-link">
+              <i class="fa-solid fa-users"></i> Meet the Founders
+            </a>
+          </div>
+
+          <!-- 3. Paul's Spark Marketing -->
+          <div class="partner-card" style="padding-top:0; overflow:hidden;">
+            <div style="height:90px; width:calc(100% + 48px); margin:-0 -24px 16px -24px; overflow:hidden;">
+              <img src="asset/pauls_spark_banner.jpeg" alt="Paul's Spark Banner" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <img src="asset/pauls_spark_round_logo.png" alt="Paul's Spark Logo" class="partner-avatar-img" style="margin-top:-38px;">
+            <h4 class="partner-name">Paul's Spark</h4>
+            <div class="partner-role">Official Marketing Agency</div>
+            <p class="partner-desc">
+              The dedicated creative and marketing powerhouse driving global launch campaigns, digital outreach, and influencer community partnerships for Ludo Game Classic.
+            </p>
+            <a href="https://www.instagram.com/pauls_spark?vrfl=MnlhMjM5Y3BwZ2ky" target="_blank" rel="noopener noreferrer" class="partner-link">
+              <i class="fa-brands fa-instagram"></i> @pauls_spark
+            </a>
+          </div>
+
+          <!-- 4. Blue Whale Store -->
+          <div class="partner-card">
+            <img src="asset/bluw_whale_store.jpeg" alt="Blue Whale Store" class="partner-avatar-img" style="width:84px; height:84px;">
+            <h4 class="partner-name">Blue Whale Store</h4>
+            <div class="partner-role">Gifts & Utility Infrastructure</div>
+            <p class="partner-desc">
+              Handles verified in-game utilities, rewards fulfillment, diamond inventory sync, and digital gift vouchers across competitive tournaments.
+            </p>
+            <span style="font-size:0.8rem; color:var(--text-muted); font-weight:600;">
+              <i class="fa-solid fa-gift" style="color:var(--gold-light);"></i> Verified Partner
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="faq-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Everything You Need to Know</span>
+          <h2 class="section-title">Frequently Asked <span class="gold-gradient-text">Questions</span></h2>
+          <p class="section-subtitle">Got questions about online connectivity, single-device play, or release dates? We have answers.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-question">
+              <span>Do I need an active internet connection to play?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              You can play Pass & Play with friends on the same device and challenge our smart tactical AI opponents 100% offline without any internet connection! An active online connection is only required for World Chat, International matchmaking, and Daily Cloud Sync rewards.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I play with my family on a single device?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              Yes! Use the "Versus Friends" (Pass & Play) mode for up to 4 players to pass the phone around just like a real physical board game.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What makes Snake Ludo different from the classic board?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              Snake Ludo is a complete 2-in-1 board game inside the app featuring dynamic ladders to climb, treacherous snakes to avoid, roll-6 bonus turn mechanics, and 3 custom arena boards (Wooden Classic, Ice Age, and Disco).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I unlock the Verified Blue Tick for my profile?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              The prestigious Blue Tick can be unlocked by reaching high-ranking esports milestones on the global leaderboard, completing 10-win streaks, winning tournament cups, or finding the rare 24-Hour VIP booster on the Casino Lucky Wheel.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>When is the official release date and where can I download?</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              Ludo Game Classic is officially scheduled for launch in November 2026. It will be available for free on the Google Play Store as well as direct APK download for Android devices worldwide.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy" class="privacy-section">
+      <div class="desktop-container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-shield-halved"></i> Player Trust & Safety</span>
+          <h2 class="section-title">Privacy Policy & <span class="gold-gradient-text">Data Protection</span></h2>
+          <p class="section-subtitle">
+            Quantum Core Studios is committed to player data privacy, transparent permissions, and safe gaming environments for Ludo Game Classic. Effective: November 2026.
+          </p>
+        </div>
+
+        <!-- Privacy Overview Banner -->
+        <div class="privacy-overview-banner">
+          <div class="privacy-overview-text">
+            <h3><i class="fa-solid fa-user-shield" style="color:var(--gold-light);"></i> Zero Data Selling Guarantee & Transparent Gaming</h3>
+            <p>
+              We believe in honest, player-first game development. Pass & Play and Smart AI modes are 100% offline and never transmit your board activity. Online features only use the minimal telemetry needed for fair competitive matchmaking.
+            </p>
+          </div>
+          <div class="privacy-guarantee-badges">
+            <span class="guarantee-badge"><i class="fa-solid fa-check"></i> Zero Data Selling</span>
+            <span class="guarantee-badge"><i class="fa-solid fa-plane"></i> 100% Offline Modes</span>
+            <span class="guarantee-badge"><i class="fa-solid fa-child"></i> COPPA Compliant</span>
+            <span class="guarantee-badge"><i class="fa-solid fa-lock"></i> Encrypted Cloud Sync</span>
+          </div>
+        </div>
+
+        <!-- Detailed Privacy Clauses Grid -->
+        <div class="privacy-grid">
+          <!-- Clause 1 -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-card-icon"><i class="fa-solid fa-database"></i></div>
+              <h4 class="privacy-card-title">1. Information We Collect</h4>
+            </div>
+            <div class="privacy-card-body">
+              <p>We only collect information directly necessary to provide seamless gameplay and online multiplayer services:</p>
+              <ul>
+                <li><strong>Profile Identity:</strong> Custom display name, chosen country flag, avatar, and optional player bio.</li>
+                <li><strong>Gameplay Statistics:</strong> Matches played, win rates, dice roll counts, win streaks, and earned achievement trophies.</li>
+                <li><strong>Device Telemetry:</strong> Device model, OS version, and screen resolution to optimize responsive rendering across phones and tablets.</li>
+                <li><strong>Local Photo Cropping:</strong> When setting a custom profile picture, images are cropped locally on-device. We never inspect your private gallery.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Clause 2 -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-card-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <h4 class="privacy-card-title">2. Offline vs. Online Data Boundaries</h4>
+            </div>
+            <div class="privacy-card-body">
+              <p>We enforce strict architectural separation between offline and online features:</p>
+              <ul>
+                <li><strong>100% Offline Modes:</strong> <em>Pass & Play (Vs Friends)</em> and <em>Vs Smart AI</em> execute entirely on your device. Zero analytics or gameplay packets leave your phone.</li>
+                <li><strong>Online Esports Features:</strong> <em>The International Arena</em> and <em>World Chat</em> communicate securely via encrypted protocols solely to match you with global contenders and compute real-time ping (ms).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Clause 3 -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-card-icon"><i class="fa-solid fa-comments"></i></div>
+              <h4 class="privacy-card-title">3. World Chat & Community Safety</h4>
+            </div>
+            <div class="privacy-card-body">
+              <p>Our dynamic World Chat connects thousands of players worldwide while keeping communications safe:</p>
+              <ul>
+                <li>Public chat messages are broadcast in real-time to active channel participants.</li>
+                <li>Automated anti-spam, profanity, and harassment filters run actively to maintain a respectful, esports-ready environment.</li>
+                <li>Players can report or mute toxic profiles with one tap. Repeated violations result in automatic revocation of verified Blue Tick status and temporary chat bans.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Clause 4 -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-card-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+              <h4 class="privacy-card-title">4. Advertising & In-App Purchases</h4>
+            </div>
+            <div class="privacy-card-body">
+              <p>Monetization in Ludo Game Classic is transparent and non-intrusive:</p>
+              <ul>
+                <li><strong>Rewarded Ads:</strong> Optional rewarded video ads (e.g. for extra Lucky Wheel spins or bonus gold) are served via verified partners compliant with Google Play Families policy.</li>
+                <li><strong>Zero Personal Profiling:</strong> We do not sell your personal gaming activity or contact details to third-party ad brokers.</li>
+                <li><strong>In-App Purchases:</strong> Diamond and Gold bundles are processed securely through Google Play In-App Billing. Quantum Core Studios never receives or stores your credit card details.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Clause 5 -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-card-icon"><i class="fa-solid fa-child-reaching"></i></div>
+              <h4 class="privacy-card-title">5. Children’s Privacy (COPPA & GDPR-K)</h4>
+            </div>
+            <div class="privacy-card-body">
+              <p>Ludo Game Classic is a family board game enjoyed by players of all ages:</p>
+              <ul>
+                <li>We comply strictly with the Children's Online Privacy Protection Act (COPPA) and international standards.</li>
+                <li>We do not knowingly collect personal identifiable information from children under 13 without verified parental consent.</li>
+                <li>Parents can play Pass & Play offline with children without creating any account or connecting to the internet.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Clause 6 -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-card-icon"><i class="fa-solid fa-user-xmark"></i></div>
+              <h4 class="privacy-card-title">6. Data Retention & Account Deletion</h4>
+            </div>
+            <div class="privacy-card-body">
+              <p>You retain full rights and control over your player profile:</p>
+              <ul>
+                <li><strong>Cache Clearing:</strong> You can clear your local game data at any time via your device's Android settings.</li>
+                <li><strong>Right to Erasure:</strong> To permanently delete your online sync profile, trophies, and leaderboard records, contact our privacy officer. All associated data will be erased within 30 days.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Privacy Contact Card -->
+        <div class="privacy-contact-card">
+          <div>
+            <h4><i class="fa-solid fa-envelope-open-text" style="color:var(--gold-light);"></i> Questions or Data Requests?</h4>
+            <p>Quantum Core Studios Data Protection Team • Lead Developer: Pradipta Pal</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://quantamcorestudio.github.io/quantam-core-website/" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+              <i class="fa-solid fa-globe"></i> Quantum Core Support Portal
+            </a>
+            <a href="https://www.instagram.com/prodipto_pal?exln=am55ZGtxOWl4ZHB4" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">
+              <i class="fa-brands fa-instagram"></i> Developer Inquiries
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download CTA Banner -->
+    <section id="download" class="download-banner-section">
+      <div class="desktop-container">
+        <div class="download-banner-card">
+          <div class="banner-cta-content">
+            <span class="esports-pill" style="margin-bottom:12px;">READY TO CLAIM THE THRONE?</span>
+            <h2>Ludo Reborn for the Mobile Generation</h2>
+            <p>
+              Experience the world’s favorite board game with stunning 3D animations, custom gothic and fantasy arenas, lightning-fast Rapid mode, and an authentic international arena experience.
+            </p>
+          </div>
+          <div class="banner-cta-actions">
+            <button class="btn btn-gold trigger-download-modal">
+              <i class="fa-brands fa-google-play"></i> Google Play Store
+            </button>
+            <button class="btn btn-glass trigger-download-modal">
+              <i class="fa-solid fa-download"></i> Direct APK (Android)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop Footer -->
+    <footer class="desktop-footer">
+      <div class="desktop-container">
+        <div class="footer-top-grid">
+          <div class="footer-col-brand">
+            <div class="brand-identity">
+              <img src="asset/game_icon.jpeg" alt="Ludo Game Classic" class="brand-icon">
+              <div class="brand-text">
+                <h2>LUDO <span class="gold-gradient-text">CLASSIC</span></h2>
+                <span class="brand-badge">By Quantum Core Studios</span>
+              </div>
+            </div>
+            <p>
+              India's and the World's #1 competitive Ludo reimagined with high-octane modes, realistic world chat, and authentic global arenas. Published November 2026.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Game Modes</h4>
+            <div class="footer-links-list">
+              <a href="#modes">International Arena</a>
+              <a href="#modes">Rapid Ludo (3-5 min)</a>
+              <a href="#modes">Snake & Ladders 2-in-1</a>
+              <a href="#modes">Pass & Play (Offline)</a>
+              <a href="#modes">Vs Smart AI</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Studios & Partners</h4>
+            <div class="footer-links-list">
+              <a href="https://quantamcorestudio.github.io/quantam-core-website/" target="_blank" rel="noopener noreferrer">Quantum Core Studios</a>
+              <a href="https://www.instagram.com/prodipto_pal?exln=am55ZGtxOWl4ZHB4" target="_blank" rel="noopener noreferrer">Pradipta Pal (Founder)</a>
+              <a href="https://www.instagram.com/pauls_spark?vrfl=MnlhMjM5Y3BwZ2ky" target="_blank" rel="noopener noreferrer">Paul's Spark Agency</a>
+              <a href="#team">Blue Whale Store</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Community & Legal</h4>
+            <div class="footer-links-list">
+              <a href="https://www.instagram.com/quantam_core?rpxt=MXVwaXJ1MTFsamV5aA==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram Official</a>
+              <a href="#community">Live World Chat Feed</a>
+              <a href="#lucky-wheel">Lucky Wheel Daily Spin</a>
+              <a href="#faq">FAQ & Support</a>
+              <a href="#privacy"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>
+            © 2026 Quantum Core Studios. Developed by Pradipta Pal, Tanay Halder & Subhrojoyti Roy. All Rights Reserved.
+          </div>
+          <div style="display:flex; gap:16px;">
+            <a href="#privacy">Privacy Policy</a>
+            <span>•</span>
+            <a href="https://quantamcorestudio.github.io/quantam-core-website/" target="_blank" rel="noopener noreferrer">Studio Portal</a>
+            <span>•</span>
+            <a href="#hero">Back to Top ↑</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /#desktop-tablet-view -->
+
+
+  <!-- ==========================================================================
+       LAYOUT 2: DEDICATED MOBILE SCREEN LAYOUT DESIGN
+       (App-Like Touch Interface with Mobile Top Bar, Reels, Native Tabs & Bottom Nav)
+       ========================================================================== -->
+  <div id="mobile-view">
+
+    <!-- Mobile Top App Bar -->
+    <div class="mobile-app-header">
+      <div class="mobile-brand-pill">
+        <img src="asset/game_icon.jpeg" alt="Ludo Game Icon" class="mobile-app-icon">
+        <div class="mobile-app-meta">
+          <h2>Ludo Classic</h2>
+          <span>Nov 2026 • Quantum Core</span>
+        </div>
+      </div>
+
+      <div class="mobile-header-right">
+        <div class="mobile-ping-badge">
+          <span class="layout-status-dot"></span> 24ms
+        </div>
+        <button class="sound-toggle-btn" style="width:32px; height:32px; font-size:0.8rem;" title="Sound SFX">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button class="mobile-get-btn trigger-download-modal">
+          GET
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Stories / Mode Reels Strip (Instagram Style) -->
+    <div class="mobile-stories-strip">
+      <div class="story-circle-item" onclick="inspectPlayerProfile(sampleChatters[0])">
+        <div class="story-ring">
+          <div class="story-avatar-inner">
+            <img src="asset/pradipta_pal_main_dev.jpeg" alt="Pradipta Pal">
+          </div>
+        </div>
+        <span class="story-label">Pradipta</span>
+      </div>
+
+      <div class="story-circle-item" onclick="document.querySelector('[data-tab=mTabModes]').click();">
+        <div class="story-ring" style="background: linear-gradient(135deg, #ef4444, #f59e0b);">
+          <div class="story-avatar-inner">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+        </div>
+        <span class="story-label">Esports</span>
+      </div>
+
+      <div class="story-circle-item" onclick="document.querySelector('[data-tab=mTabModes]').click();">
+        <div class="story-ring" style="background: linear-gradient(135deg, #3b82f6, #10b981);">
+          <div class="story-avatar-inner">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+        </div>
+        <span class="story-label">Rapid</span>
+      </div>
+
+      <div class="story-circle-item" onclick="document.querySelector('[data-tab=mTabModes]').click();">
+        <div class="story-ring" style="background: linear-gradient(135deg, #10b981, #f59e0b);">
+          <div class="story-avatar-inner">
+            <i class="fa-solid fa-staff-snake"></i>
+          </div>
+        </div>
+        <span class="story-label">Snake</span>
+      </div>
+
+      <div class="story-circle-item" onclick="document.querySelector('[data-tab=mTabWheel]').click();">
+        <div class="story-ring" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
+          <div class="story-avatar-inner">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+        </div>
+        <span class="story-label">Wheel</span>
+      </div>
+
+      <div class="story-circle-item" onclick="document.querySelector('[data-tab=mTabProfile]').click();">
+        <div class="story-ring" style="background: linear-gradient(135deg, #0095f6, #6366f1);">
+          <div class="story-avatar-inner">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+        </div>
+        <span class="story-label">Blue Tick</span>
+      </div>
+    </div>
+
+    <!-- Mobile Viewports Container (Controlled by Bottom Navigation) -->
+    <div class="mobile-view-tabs-container">
+
+      <!-- ================= TAB 1: MOBILE HOME ================= -->
+      <div id="mTabHome" class="mobile-tab-view active-tab">
+        <!-- Mobile Hero Poster -->
+        <div class="mobile-hero-container">
+          <div class="mobile-poster-card">
+            <img src="asset/potrait.png" alt="Ludo Game Classic Mobile Poster">
+            <div class="mobile-poster-overlay">
+              <div class="mobile-hero-tag">
+                <i class="fa-solid fa-trophy"></i> INDIA'S & WORLD'S #1
+              </div>
+              <h2 class="mobile-hero-title">
+                Ludo Classic: <br>
+                <span class="gold-gradient-text">Roll & Conquer</span>
+              </h2>
+              <p class="mobile-hero-subtitle">
+                Simulated international esports, 2-in-1 Snake Ludo & Gothic Arenas.
+              </p>
+
+              <div class="mobile-hero-ctas">
+                <button class="btn btn-gold trigger-download-modal" style="width:100%; padding:14px;">
+                  <i class="fa-brands fa-google-play"></i> Install Free on Google Play
+                </button>
+                <button class="btn btn-glass" onclick="document.getElementById('mobileVideoCard').scrollIntoView({behavior:'smooth'});" style="width:100%; padding:10px; font-size:0.85rem;">
+                  <i class="fa-solid fa-play"></i> Watch Gameplay Clip
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Quick Stats Bar -->
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; margin-bottom:20px; text-align:center;">
+          <div style="background:var(--bg-glass-card); padding:10px; border-radius:12px; border:1px solid var(--bg-glass-border);">
+            <div style="color:var(--gold-light); font-weight:800; font-size:1.1rem;">500K+</div>
+            <div style="color:var(--text-muted); font-size:0.7rem;">Pre-Reg</div>
+          </div>
+          <div style="background:var(--bg-glass-card); padding:10px; border-radius:12px; border:1px solid var(--bg-glass-border);">
+            <div style="color:var(--ping-green); font-weight:800; font-size:1.1rem;">3s</div>
+            <div style="color:var(--text-muted); font-size:0.7rem;">Matchmaking</div>
+          </div>
+          <div style="background:var(--bg-glass-card); padding:10px; border-radius:12px; border:1px solid var(--bg-glass-border);">
+            <div style="color:var(--gold-light); font-weight:800; font-size:1.1rem;">4.9 ★</div>
+            <div style="color:var(--text-muted); font-size:0.7rem;">Esports Tier</div>
+          </div>
+        </div>
+
+        <!-- Mobile Video Player Card -->
+        <div id="mobileVideoCard" style="background:var(--bg-glass-card); border-radius:16px; border:1px solid var(--bg-glass-border); overflow:hidden; margin-bottom:24px;">
+          <div style="padding:12px 16px; border-bottom:1px solid var(--bg-glass-border); display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-weight:700; font-size:0.88rem;"><i class="fa-solid fa-video" style="color:var(--gold-light);"></i> Gameplay Trailer</span>
+            <span class="esports-pill" style="margin:0; font-size:0.68rem; padding:2px 8px;">LIVE FOOTAGE</span>
+          </div>
+          <video controls playsinline poster="asset/game_homescreen_bg.jpeg" style="width:100%; max-height:240px; object-fit:cover;">
+            <source src="asset/landscape_video.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Mobile Quick Features Accordion -->
+        <div style="margin-bottom:24px;">
+          <h3 style="font-size:1.2rem; margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+            <i class="fa-solid fa-wand-magic-sparkles" style="color:var(--gold-light);"></i> Key Highlights
+          </h3>
+
+          <div class="faq-item open" style="margin-bottom:10px;">
+            <button class="faq-question" style="padding:14px 16px; font-size:0.9rem;">
+              <span>100% Offline Pass & Play</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer" style="padding:0 16px 14px 16px; font-size:0.84rem;">
+              Play with family on a single phone without internet or mobile data! Just pass the phone around.
+            </div>
+          </div>
+
+          <div class="faq-item" style="margin-bottom:10px;">
+            <button class="faq-question" style="padding:14px 16px; font-size:0.9rem;">
+              <span>Simulated Global Arena & Ping</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer" style="padding:0 16px 14px 16px; font-size:0.84rem;">
+              Experience realistic 3-second matchmaking with opponents bearing national flags, blue tick checkmarks, and low millisecond latency indicator.
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Founders Shoutout Card -->
+        <div style="background:var(--bg-glass-card); border:1px solid var(--bg-glass-border); border-radius:16px; padding:18px; margin-bottom:20px; text-align:center;">
+          <img src="asset/pradipta_pal_main_dev.jpeg" alt="Pradipta Pal" style="width:64px; height:64px; border-radius:50%; object-fit:cover; margin:0 auto 10px auto; border:2px solid var(--gold-light);">
+          <h4 style="font-size:1.1rem; margin-bottom:2px;">Pradipta Pal</h4>
+          <span style="font-size:0.75rem; color:var(--gold-light); font-weight:700;">Founder, CEO & Lead Architect</span>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin:8px 0 14px 0;">
+            Created and coded by Pradipta Pal, Tanay Halder & Subhrojoyti Roy at Quantum Core Studios. Launching Nov 2026.
+          </p>
+          <a href="https://www.instagram.com/prodipto_pal?exln=am55ZGtxOWl4ZHB4" target="_blank" rel="noopener noreferrer" class="social-link-btn" style="width:100%; justify-content:center; padding:8px 14px; font-size:0.82rem;">
+            <i class="fa-brands fa-instagram"></i> Follow on Instagram
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ================= TAB 2: MOBILE GAME MODES ================= -->
+      <div id="mTabModes" class="mobile-tab-view">
+        <div style="margin-bottom:16px;">
+          <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:4px;">Game Modes Roster</h3>
+          <p style="font-size:0.82rem; color:var(--text-muted);">Choose your battlefield and battle rule set</p>
+        </div>
+
+        <!-- Mode 1: International -->
+        <div class="mobile-mode-card">
+          <div class="mobile-mode-header">
+            <img src="asset/international_match_button.png" alt="International Match">
+          </div>
+          <div class="mobile-mode-body">
+            <h4 class="mobile-mode-title">🌐 International Match</h4>
+            <p class="mobile-mode-desc">2-4 Players. Instant 3s global matchmaking with country flags (USA 🇺🇸, Japan 🇯🇵, India 🇮🇳) and real-time ping.</p>
+            <button class="btn btn-sm btn-gold trigger-download-modal" style="width:100%;">Enter Arena</button>
+          </div>
+        </div>
+
+        <!-- Mode 2: Rapid -->
+        <div class="mobile-mode-card">
+          <div class="mobile-mode-header">
+            <img src="asset/rapid_ludo_button.png" alt="Rapid Ludo">
+          </div>
+          <div class="mobile-mode-body">
+            <h4 class="mobile-mode-title">⚡ Rapid Ludo Sprint</h4>
+            <p class="mobile-mode-desc">3 to 5-minute adrenaline matches! Short tracks and turbo rules for fast breaks.</p>
+            <button class="btn btn-sm btn-gold trigger-download-modal" style="width:100%;">Play Rapid</button>
+          </div>
+        </div>
+
+        <!-- Mode 3: Snake Ludo -->
+        <div class="mobile-mode-card">
+          <div class="mobile-mode-header">
+            <img src="asset/snake_ludo_button.png" alt="Snake Ludo">
+          </div>
+          <div class="mobile-mode-body">
+            <h4 class="mobile-mode-title">🐍 Snake & Ladders 2-in-1</h4>
+            <p class="mobile-mode-desc">Standalone board race! Climb ladders, dodge snakes, and roll sixes for bonus turn rewards.</p>
+            <button class="btn btn-sm btn-gold trigger-download-modal" style="width:100%;">Play Snake</button>
+          </div>
+        </div>
+
+        <!-- Mode 4: Pass & Play -->
+        <div class="mobile-mode-card">
+          <div class="mobile-mode-header" style="background:#1f2937;">
+            <img src="asset/play_button_bg.png" alt="Pass & Play" style="max-height:90px;">
+          </div>
+          <div class="mobile-mode-body">
+            <h4 class="mobile-mode-title">👥 Pass & Play (Offline)</h4>
+            <p class="mobile-mode-desc">Couch multiplayer on 1 phone for up to 4 players without internet or Wi-Fi.</p>
+            <button class="btn btn-sm btn-gold trigger-download-modal" style="width:100%;">Start Local</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ================= TAB 3: MOBILE WORLD CHAT ================= -->
+      <div id="mTabChat" class="mobile-tab-view">
+        <div style="margin-bottom:14px; display:flex; align-items:center; justify-content:space-between;">
+          <div>
+            <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:2px;">World Chat</h3>
+            <span style="font-size:0.75rem; color:var(--ping-green); font-weight:700;">🟢 8,420 Online</span>
+          </div>
+          <span style="font-size:0.72rem; color:var(--gold-light); font-weight:600;">Tap chatter to inspect</span>
+        </div>
+
+        <div class="chat-stream-panel" style="margin-bottom:16px;">
+          <div class="chat-feed-box" style="height:320px;">
+            <!-- JS renders chat rows here -->
+          </div>
+
+          <div class="chat-quick-chips">
+            <button class="quick-chip">Good game!</button>
+            <button class="quick-chip">Let's play!</button>
+            <button class="quick-chip">Roll a 6!</button>
+            <button class="quick-chip">Rematch?</button>
+          </div>
+
+          <div class="chat-input-row" style="padding:10px 14px;">
+            <input type="text" class="chat-input-field" placeholder="Chat with players...">
+            <button class="btn btn-gold btn-send-chat" style="padding:8px 14px; font-size:0.85rem;">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ================= TAB 4: MOBILE LUCKY WHEEL ================= -->
+      <div id="mTabWheel" class="mobile-tab-view">
+        <div style="text-align:center; margin-bottom:16px;">
+          <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:4px;">Lucky Spin Wheel</h3>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Spin for Free Gold, Diamonds & Grandmaster Titles</p>
+        </div>
+
+        <div class="wheel-container-card" style="padding:20px; margin-bottom:20px;">
+          <div class="wheel-pointer" style="border-top-width:24px; top:-12px;"></div>
+          <div class="wheel-wrapper" style="width:260px; height:260px; margin:0 auto 20px auto;">
+            <canvas id="luckyWheelCanvasMobile" width="260" height="260" style="width:100%; height:100%; border-radius:50%; box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);"></canvas>
+            <div class="wheel-center-cap" style="width:48px; height:48px; font-size:0.85rem;">SPIN</div>
+          </div>
+
+          <button id="btnMobileSpin" class="btn btn-gold" style="width:100%; margin-bottom:10px;">
+            <i class="fa-solid fa-gift"></i> Claim Daily Free Spin
+          </button>
+          <button class="btn btn-glass trigger-download-modal" style="width:100%; font-size:0.82rem;">
+            <i class="fa-solid fa-gem" style="color:#60a5fa;"></i> Spin with 149 Diamonds
+          </button>
+        </div>
+
+        <div class="daily-rewards-card" style="padding:16px;">
+          <h4 style="font-size:1rem; margin-bottom:12px; color:var(--gold-light);">🎁 Today's Available Loot</h4>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:0.8rem;">
+            <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:8px;">💎 +500 Diamonds</div>
+            <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:8px;">🪙 +1,000 Gold</div>
+            <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:8px;">⚡ 24h Enhancer</div>
+            <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:8px;">👑 Grandmaster Title</div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ================= TAB 5: MOBILE PROFILE & TEAM ================= -->
+      <div id="mTabProfile" class="mobile-tab-view">
+        <div style="margin-bottom:14px;">
+          <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:4px;">Instagram Profile View</h3>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Custom avatar, VIP Blue Tick & trophies</p>
+        </div>
+
+        <!-- Instagram Profile Showcase Card -->
+        <div class="profile-inspector-panel" style="margin-bottom:24px;">
+          <div class="profile-card-cover" style="height:90px; background-image:url('asset/game_homescreen_bg.jpeg');"></div>
+          <div class="profile-card-body" style="padding:0 18px 18px 18px;">
+            <div class="profile-avatar-wrapper" style="margin-top:-38px;">
+              <div class="profile-avatar-img" style="width:74px; height:74px; font-size:1.8rem;">PP</div>
+              <div class="profile-avatar-glow-ring"></div>
+            </div>
+
+            <div class="profile-name-row">
+              <h4 class="profile-display-name" style="font-size:1.15rem;">🇮🇳 ProdiptoPal</h4>
+              <span class="blue-tick-badge"><i class="fa-solid fa-check"></i></span>
+            </div>
+
+            <span class="profile-title-tag" style="font-size:0.68rem;">Supreme Architect</span>
+            <p class="profile-bio" style="font-size:0.82rem;">
+              Founder, CEO & Lead Developer of Ludo Game Classic. Settle your scores on the International Arena!
+            </p>
+
+            <div class="profile-stats-grid" style="padding:10px; margin-bottom:14px;">
+              <div class="profile-stat-box">
+                <h5 style="font-size:1rem;">1,420</h5>
+                <p style="font-size:0.68rem;">Matches</p>
+              </div>
+              <div class="profile-stat-box">
+                <h5 style="font-size:1rem;">88.4%</h5>
+                <p style="font-size:0.68rem;">Win Rate</p>
+              </div>
+              <div class="profile-stat-box">
+                <h5 style="font-size:1rem;">#1</h5>
+                <p style="font-size:0.68rem;">Global</p>
+              </div>
+            </div>
+
+            <button class="btn btn-gold trigger-download-modal" style="width:100%; padding:10px; font-size:0.85rem;">
+              <i class="fa-solid fa-gamepad"></i> Challenge in 1v1
+            </button>
+          </div>
+        </div>
+
+        <!-- Studios & Partners Accordion Cards -->
+        <h4 style="font-size:1.05rem; margin-bottom:12px; color:var(--gold-light);">Studio & Partners</h4>
+        
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px;">
+          <!-- Quantum Core -->
+          <div style="background:var(--bg-glass-card); border:1px solid var(--bg-glass-border); border-radius:12px; padding:12px; display:flex; align-items:center; gap:12px;">
+            <img src="asset/quantamcore_round_logo.png" alt="Quantum Core Studios" style="width:48px; height:48px; border-radius:50%;">
+            <div style="flex:1;">
+              <h5 style="font-size:0.9rem;">Quantum Core Studios</h5>
+              <span style="font-size:0.72rem; color:var(--text-muted);">Main Developing Studio</span>
+            </div>
+            <a href="https://quantamcorestudio.github.io/quantam-core-website/" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem; color:var(--gold-light);">Website</a>
+          </div>
+
+          <!-- Paul's Spark -->
+          <div style="background:var(--bg-glass-card); border:1px solid var(--bg-glass-border); border-radius:12px; padding:12px; display:flex; align-items:center; gap:12px;">
+            <img src="asset/pauls_spark_round_logo.png" alt="Paul's Spark" style="width:48px; height:48px; border-radius:50%;">
+            <div style="flex:1;">
+              <h5 style="font-size:0.9rem;">Paul's Spark</h5>
+              <span style="font-size:0.72rem; color:var(--text-muted);">Official Marketing Agency</span>
+            </div>
+            <a href="https://www.instagram.com/pauls_spark?vrfl=MnlhMjM5Y3BwZ2ky" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem; color:var(--gold-light);">Instagram</a>
+          </div>
+
+          <!-- Blue Whale Store -->
+          <div style="background:var(--bg-glass-card); border:1px solid var(--bg-glass-border); border-radius:12px; padding:12px; display:flex; align-items:center; gap:12px;">
+            <img src="asset/bluw_whale_store.jpeg" alt="Blue Whale Store" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
+            <div style="flex:1;">
+              <h5 style="font-size:0.9rem;">Blue Whale Store</h5>
+              <span style="font-size:0.72rem; color:var(--text-muted);">Gifts & Utilities Partner</span>
+            </div>
+            <span style="font-size:0.75rem; color:var(--gold-light);">Verified</span>
+          </div>
+        </div>
+
+        <!-- Mobile Privacy Policy Accordion Card -->
+        <h4 style="font-size:1.05rem; margin-bottom:12px; color:var(--gold-light);">
+          <i class="fa-solid fa-shield-halved"></i> Legal & Data Privacy
+        </h4>
+
+        <div class="faq-item" style="margin-bottom:20px;">
+          <button class="faq-question" style="padding:14px 16px; font-size:0.9rem;">
+            <span><i class="fa-solid fa-user-shield" style="color:var(--gold-light);"></i> Read Privacy Policy Summary</span>
+            <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+          </button>
+          <div class="faq-answer" style="padding:0 16px 16px 16px; font-size:0.82rem; line-height:1.5;">
+            <p style="margin-bottom:8px;"><strong>Quantum Core Studios Player Promise:</strong></p>
+            <ul style="padding-left:18px; list-style:disc; margin-bottom:12px;">
+              <li><strong>Zero Data Selling:</strong> We never sell personal gamer profiles or telemetry to third parties.</li>
+              <li><strong>100% Offline Modes:</strong> Pass & Play and Smart AI process zero remote packets.</li>
+              <li><strong>COPPA Compliant:</strong> Family-safe board gaming for players of all ages.</li>
+              <li><strong>In-App Billing:</strong> Purchases processed securely via Google Play.</li>
+              <li><strong>Right to Erasure:</strong> Contact us to permanently delete your cloud sync records.</li>
+            </ul>
+            <div style="font-size:0.75rem; color:var(--gold-light);">
+              Official Launch: November 2026 • Lead Architect: Pradipta Pal
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; padding:16px 0; font-size:0.75rem; color:var(--text-dim);">
+          <a href="#privacy" style="color:var(--gold-light); font-weight:600;"><i class="fa-solid fa-shield-halved"></i> Full Privacy Policy</a>
+          <span style="margin:0 8px;">•</span>
+          <a href="https://quantamcorestudio.github.io/quantam-core-website/" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);">Studio Portal</a>
+          <div style="margin-top:6px;">© 2026 Quantum Core Studios. Launching November 2026.</div>
+        </div>
+      </div>
+
+    </div><!-- /.mobile-view-tabs-container -->
+
+    <!-- Mobile Fixed Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+      <button class="bottom-nav-item active" data-tab="mTabHome">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </button>
+
+      <button class="bottom-nav-item" data-tab="mTabModes">
+        <i class="fa-solid fa-gamepad"></i>
+        <span>Modes</span>
+      </button>
+
+      <button class="bottom-nav-item" data-tab="mTabChat">
+        <i class="fa-solid fa-comments"></i>
+        <span>World Chat</span>
+      </button>
+
+      <button class="bottom-nav-item" data-tab="mTabWheel">
+        <i class="fa-solid fa-gift"></i>
+        <span>Spin</span>
+      </button>
+
+      <button class="bottom-nav-item" data-tab="mTabProfile">
+        <i class="fa-solid fa-user"></i>
+        <span>Profile</span>
+      </button>
+    </nav>
+
+  </div><!-- /#mobile-view -->
+
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM SHEET MODAL (FOR PLAYER INSPECTION ON MOBILE)
+       ========================================================================== -->
+  <div id="mobileProfileBottomSheet" class="mobile-bottom-sheet">
+    <div class="bottom-sheet-content">
+      <div class="sheet-handle-bar"></div>
+      
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+        <span style="font-size:0.75rem; color:var(--gold-light); font-weight:700;">INSPECTING PLAYER PROFILE</span>
+        <button id="btnCloseBottomSheet" style="color:var(--text-muted); font-size:1.1rem;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+        <div id="mProfileAvatar" style="width:60px; height:60px; border-radius:50%; background:var(--bg-dark-surface); border:2px solid var(--gold-light); display:flex; align-items:center; justify-content:center; font-size:1.4rem; font-weight:800; color:var(--gold-light);">
+          PP
+        </div>
+        <div>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <h4 id="mProfileName" style="font-size:1.15rem; font-weight:800;">🇮🇳 ProdiptoPal</h4>
+            <span id="mProfileBlueTick" class="blue-tick-badge"><i class="fa-solid fa-check"></i></span>
+          </div>
+          <span id="mProfileTitle" class="profile-title-tag" style="font-size:0.68rem;">Supreme</span>
+        </div>
+      </div>
+
+      <p id="mProfileBio" style="font-size:0.84rem; color:var(--text-muted); margin-bottom:16px;">
+        Catch me on the International Arena!
+      </p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; text-align:center;">
+        <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:8px;">
+          <h5 id="mProfileMatches" style="color:var(--gold-light); font-size:1.1rem; font-weight:800;">1,420</h5>
+          <p style="font-size:0.7rem; color:var(--text-muted);">Matches Played</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:8px;">
+          <h5 id="mProfileWinRate" style="color:var(--gold-light); font-size:1.1rem; font-weight:800;">88.4%</h5>
+          <p style="font-size:0.7rem; color:var(--text-muted);">Win Rate</p>
+        </div>
+      </div>
+
+      <button class="btn btn-gold trigger-download-modal" style="width:100%; padding:12px;">
+        <i class="fa-solid fa-handshake"></i> Send 1v1 Challenge Request
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       GLOBAL DOWNLOAD & PRE-REGISTER MODAL
+       ========================================================================== -->
+  <div id="downloadModal" class="global-modal-overlay">
+    <div class="modal-content-card">
+      <button id="btnCloseModal" class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+      <img src="asset/game_icon.jpeg" alt="Ludo Game Classic Icon" style="width:70px; height:70px; border-radius:16px; margin:0 auto 16px auto; border:2px solid var(--gold-light); box-shadow:0 4px 20px rgba(245, 158, 11, 0.4);">
+
+      <h3 style="font-size:1.6rem; margin-bottom:6px;">Ludo Game Classic</h3>
+      <p style="color:var(--gold-light); font-weight:700; font-size:0.88rem; margin-bottom:16px;">
+        Official Launch: November 2026 • Quantum Core Studios
+      </p>
+
+      <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.5; margin-bottom:24px;">
+        Pre-register now to receive +1,000 Free Starter Gold, 250 Diamonds, and the exclusive "Pioneer" avatar frame on release day!
+      </p>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <a href="https://quantamcorestudio.github.io/quantam-core-website/" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width:100%;">
+          <i class="fa-brands fa-google-play"></i> Pre-Register on Google Play
+        </a>
+        <button class="btn btn-glass" onclick="showToast('Direct APK Package download queued!'); document.getElementById('downloadModal').classList.remove('open');">
+          <i class="fa-solid fa-download"></i> Direct APK Download (Android)
+        </button>
+      </div>
+
+      <div style="margin-top:20px; font-size:0.75rem; color:var(--text-dim);">
+        Published by Quantum Core Studios • Marketing by Paul's Spark
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Global Toast Notification Element -->
+  <div id="globalToast" class="toast-notification">
+    <i class="fa-solid fa-bell" style="color:var(--gold-light);"></i>
+    <span>Welcome to Ludo Game Classic!</span>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
